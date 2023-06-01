@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yloonspring.accservers.mapper.CurcodeMyBatisMapper">
+
+<resultMap type="com.yloonspring.accservers.po.Curcode" id="BaseResultMap">
+	<result column="CURCODE" jdbcType="VARCHAR" property="curcode"/>
+	<result column="CURSYM" jdbcType="VARCHAR" property="cursym"/>
+	<result column="CURSECUNIT" jdbcType="DECIMAL" property="cursecunit" />
+	<result column="CURCHDESC" jdbcType="VARCHAR" property="curchdesc" />
+	<result column="SUBMITOPER" jdbcType="VARCHAR" property="submitoper" />
+	<result column="MEMO" jdbcType="VARCHAR" property="memo" />
+</resultMap>
+
+<select id="selectCurcode" parameterType="com.yloonspring.accservers.po.Curcode" resultMap="BaseResultMap">
+	select
+		CURCODE, CURSYM, CURSECUNIT,
+	 	CURCHDESC, SUBMITOPER, MEMO
+	from ACCOUNT.A_PRM_CURCODE where CURCODE=#{curcode,jdbcType=VARCHAR}
+</select>
+
+<insert id="insertCurcode"  parameterType="com.yloonspring.accservers.po.Curcode" >
+insert into ACCOUNT.A_PRM_CURCODE(CurCode,CurSym, CurSecUnit, CurChDesc,SubmitOper,Memo)
+values(
+	#{curcode},#{cursym},#{cursecunit},#{curchdesc},#{submitoper},#{memo}
+)
+</insert>
+</mapper>

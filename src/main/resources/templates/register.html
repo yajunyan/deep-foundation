@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"></meta>
+<title>账户系统币种注册</title>
+<link rel="stylesheet" href="/boot/css/bootstrap.min.css"></link>
+<script src="/boot/js/jquery-2.1.1.min.js"></script>
+<script src="/boot/js/bootstrap.min.js"></script>
+</head>
+<body>
+<form action="register" method="post">
+
+  <div class="form-group">
+    <label for="curcode">货币码：</label>
+    <input type="text" class="form-control" id="curcode" name="curcode" placeholder="输入货币码"></input>
+  </div>
+  
+  <div class="form-group">
+    <label for="curSym">货币符号：</label>
+    <input type="text" class="form-control" name="cursym" id="cursym" placeholder="输入货币符号"></input>
+  </div>
+  
+  <div class="form-group">
+    <label for="cursecunit">辅币单位：</label>
+    <input type="text" class="form-control" id="cursecunit"  name="cursecunit" placeholder="输入辅币单位"></input>
+  </div>
+  
+  <div class="form-group">
+    <label for="curchdesc">中文描述：</label>
+    <input type="text" class="form-control" id="curchdesc" name="curchdesc" placeholder="输入中文描述"></input>
+  </div>
+  
+  <div class="form-group">
+    <label for="submitoper">操作员：</label>
+    <input type="text" class="form-control" id="submitoper" name="submitoper" placeholder="输入操作员"></input>
+  </div>
+  
+  <div class="form-group">
+    <label for="memo">备注：</label>
+    <input type="text" class="form-control" id="memo"  name="memo" placeholder="输入备注"></input>
+  </div>
+  
+  <button type="submit" class="default">提交</button>
+  
+</form>
+</body>
+</html>
